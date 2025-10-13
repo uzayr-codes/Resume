@@ -183,7 +183,7 @@ body {
 }
 
 .social-links a:hover {
-  color: #fff;
+  color: black;
   background: var(--Red-color, #ff4b4b);
   box-shadow: 0 0 15px rgba(255, 75, 75, 0.6);
   border-color: var(--Red-color, #ff4b4b);
