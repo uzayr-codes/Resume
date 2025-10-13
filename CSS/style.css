@@ -205,7 +205,7 @@ body {
   color: #a8a8a8;
   font-size: 20px;
 }
-.About-Underline-Gradient{
+.About-Underline-Gradient {
   margin-left: 348px;
 }
 .profile-card {
@@ -214,7 +214,10 @@ body {
   border-radius: 20px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
   position: sticky;
+  top: 30px;
+  padding: 30px 20px;
 }
+
 .profile-card img {
   width: 150px;
   height: 150px;
@@ -223,17 +226,102 @@ body {
   border: 4px solid var(--Red-color);
   margin-bottom: 15px;
 }
+
 .profile-card h4 {
   color: var(--White-color);
   font-variant: all-small-caps;
+  letter-spacing: 1px;
 }
+
 .profile-card p {
   color: var(--Red-color);
-  font: -webkit-mini-control;
+  font-size: 14px;
 }
+
 .Rating i {
-  color: #fbbf24;
+  color: #fbbf24 !important;
 }
-.Rating span{
+.Rating span {
+  color: var(--White-color) !important;
+}
+
+.profile-card hr {
+  border-color: rgba(92, 88, 88, 0.9);
+}
+
+.btn-download {
+  background-color: var(--Red-color);
+  border: none;
+}
+.btn-download:hover {
+  background-color: #bd164e;
   color: var(--White-color);
+}
+.btn-contact {
+  border: 1px solid var(--Red-color);
+  color: var(--Red-color);
+}
+.btn-contact:hover {
+  background-color: var(--Red-color);
+  color: var(--White-color);
+}
+
+.profile-card a {
+  color: var(--White-color);
+  transition: 0.3s ease;
+}
+.profile-card a:hover {
+  color: var(--Red-color);
+}
+
+/* ===== ABOUT SECTION ===== */
+.section-about {
+  padding: 50px 0;
+}
+
+.about-content {
+  padding-left: 20px;
+}
+
+.badge {
+  background-color: #371c1c;
+  color: var(--Red-color);
+  font-size: 15px;
+  border-radius: 50px;
+}
+
+.about-content h2 {
+  font-weight: 400;
+}
+.about-content p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--White-color);
+  margin-bottom: 16px;
+}
+
+.info-box {
+  background-color: var(--LightGrey-color);
+  color: var(--White-color);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.3s;
+  padding: 37px;
+  border-radius: 30px;
+}
+
+.info-box:hover {
+  border-color: var(--Red-color);
+  transform: translateY(-3px);
+}
+.small-txt {
+  color: var(--Red-color);
+}
+.small-text {
+  color: var(--White-color);
+}
+.info-box i {
+  color: var(--Red-color);
 }
