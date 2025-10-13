@@ -205,15 +205,8 @@ body {
   color: #a8a8a8;
   font-size: 20px;
 }
-.section-subtitle {
-  display: inline-block;
-  font-size: 0.875rem;
-  font-weight: 400;
-  color: var(--accent-color);
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 1.5rem;
-  position: relative;
+.About-Underline-Gradient{
+  margin-left: 348px;
 }
 .profile-card {
   background-color: var(--LightGrey-color);

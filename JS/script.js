@@ -3,19 +3,19 @@ window.addEventListener("scroll", () => {
   navbar.classList.toggle("scrolled", window.scrollY > 100);
 });
 
-document.querySelectorAll(".nav-item.dropdown").forEach((item) => {
-  item.addEventListener("mouseenter", () => {
-    if (window.innerWidth > 992) {
-      item.querySelector(".dropdown-menu")?.classList.add("show");
-    }
-  });
+// document.querySelectorAll(".nav-item.dropdown").forEach((item) => {
+//   item.addEventListener("mouseenter", () => {
+//     if (window.innerWidth > 992) {
+//       item.querySelector(".dropdown-menu")?.classList.add("show");
+//     }
+//   });
 
-  item.addEventListener("mouseleave", () => {
-    if (window.innerWidth > 992) {
-      item.querySelector(".dropdown-menu")?.classList.remove("show");
-    }
-  });
-});
+//   item.addEventListener("mouseleave", () => {
+//     if (window.innerWidth > 992) {
+//       item.querySelector(".dropdown-menu")?.classList.remove("show");
+//     }
+//   });
+// });
 
 document.addEventListener("DOMContentLoaded", () => {
   if (window.AOS) {
