@@ -68,23 +68,22 @@ window.addEventListener("scroll", () => {
     }
   });
 });
-document.addEventListener("DOMContentLoaded", () => {
-  const progressBars = document.querySelectorAll(".progress-bar");
-  let animated = false;
+   const skillsSection = document.querySelector(".skills-section");
+      const progressBars = document.querySelectorAll(".progress-bar");
+      let animated = false;
 
-  const animateBars = () => {
-    const section = document.querySelector(".skills");
-    const sectionPos = section.getBoundingClientRect().top;
-    const screenPos = window.innerHeight;
+      function showProgress() {
+        progressBars.forEach(bar => {
+          const value = bar.getAttribute("data-percentage");
+          bar.style.width = value + "%";
+        });
+      }
 
-    if (sectionPos < screenPos && !animated) {
-      progressBars.forEach((bar) => {
-        const target = bar.getAttribute("data-percentage");
-        bar.style.width = target + "%";
+      window.addEventListener("scroll", () => {
+        const sectionPos = skillsSection.getBoundingClientRect().top;
+        const screenPos = window.innerHeight / 1.3;
+        if (sectionPos < screenPos && !animated) {
+          showProgress();
+          animated = true;
+        }
       });
-      animated = true; // Run once
-    }
-  };
-
-  window.addEventListener("scroll", animateBars);
-});
