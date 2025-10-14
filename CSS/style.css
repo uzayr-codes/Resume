@@ -326,3 +326,41 @@ body {
 .info-box i {
   color: var(--Red-color);
 }
+.section-tag {
+  display: inline-block;
+  padding: 6px 16px;
+  background:  #371C1C;
+  color: var(--Red-color);
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 16px;
+}
+.skills .skill {
+  margin-bottom: 20px;
+  margin-left: 100px;
+}
+
+.skills span {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--White-color);
+}
+
+.progress {
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0px;
+  background: linear-gradient(90deg, #ff4b2b, #ff416c);
+  border-radius: 20px;
+  transition: width 1.5s ease-in-out;
+}

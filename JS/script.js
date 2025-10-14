@@ -47,26 +47,44 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
 
-  const sections = document.querySelectorAll("section");
-  const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+window.addEventListener("scroll", () => {
+  let current = "";
 
-  window.addEventListener("scroll", () => {
-    let current = "";
-
-    sections.forEach((section) => {
-      const sectionTop = section.offsetTop - 100;
-      const sectionHeight = section.clientHeight;
-      if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
-        current = section.getAttribute("id");
-      }
-    });
-
-    navLinks.forEach((link) => {
-      link.classList.remove("active");
-      if (link.getAttribute("href").includes(current)) {
-        link.classList.add("active");
-      }
-    });
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop - 100;
+    const sectionHeight = section.clientHeight;
+    if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+      current = section.getAttribute("id");
+    }
   });
 
+  navLinks.forEach((link) => {
+    link.classList.remove("active");
+    if (link.getAttribute("href").includes(current)) {
+      link.classList.add("active");
+    }
+  });
+});
+document.addEventListener("DOMContentLoaded", () => {
+  const progressBars = document.querySelectorAll(".progress-bar");
+  let animated = false;
+
+  const animateBars = () => {
+    const section = document.querySelector(".skills");
+    const sectionPos = section.getBoundingClientRect().top;
+    const screenPos = window.innerHeight;
+
+    if (sectionPos < screenPos && !animated) {
+      progressBars.forEach((bar) => {
+        const target = bar.getAttribute("data-percentage");
+        bar.style.width = target + "%";
+      });
+      animated = true; // Run once
+    }
+  };
+
+  window.addEventListener("scroll", animateBars);
+});
