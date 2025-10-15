@@ -87,3 +87,14 @@ window.addEventListener("scroll", () => {
           animated = true;
         }
       });
+      // Progress Bar Animation
+document.addEventListener("DOMContentLoaded", () => {
+  const progressBars = document.querySelectorAll(".progress-bar");
+
+  progressBars.forEach(bar => {
+    const percentage = bar.getAttribute("data-percentage");
+    setTimeout(() => {
+      bar.style.width = `${percentage}%`;
+    }, 300); // delay for animation
+  });
+});

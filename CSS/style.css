@@ -336,69 +336,83 @@ body {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  margin-bottom: 16px;
+  margin-bottom: 25px;
 }
-.skills {
-  margin-top: 35px;
+
+.skills-section {
+  margin-top: 40px;
   width: 100%;
   text-align: left;
-}
-
-/* Section Title */
-.skills h4 {
-  color: var(--White-color);
-  font-size: 22px;
-  font-weight: 700;
-  margin-bottom: 30px;
-}
-
-/* Each Skill Row */
-.skill {
-  margin-bottom: 26px;
+  overflow-y: visible !important;
+  overflow-x: hidden !important;
   position: relative;
 }
 
-/* Skill Label + Percentage */
-.skill span {
+.skills-section h4 {
+  color: var(--White-color);
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 35px;
+}
+
+.skill-txt {
+  margin-bottom: 35px;
+  position: relative;
+}
+
+.skill-txt span {
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: var(--White-color);
   font-size: 15px;
   font-weight: 600;
-  margin-bottom: 10px;
-  position: relative;
+  margin-bottom: 12px;
 }
 
-/* Progress Bar Background */
+/* Progress bar base */
 .progress {
   width: 100%;
   height: 10px;
   background-color: rgba(255, 255, 255, 0.08);
   border-radius: 50px;
-  overflow: hidden;
+  overflow: hidden; /* Fix scroll bar issue */
+  position: relative;
 }
 
-/* Progress Fill */
+/* Actual progress fill */
 .progress-bar {
   height: 100%;
-  width: 0;
-  background: linear-gradient(90deg, #ff416c, #ff4b2b, #ff758c);
+  width: 70%; /* Decreased to 70% */
+  background: linear-gradient(90deg, var(--Red-color), #b63553, #cfbbbe);
   border-radius: 50px;
-  transition: width 1.5s ease-in-out;
+  transition: width 1s ease-in-out; /* Smooth animation */
 }
 
-/* Percentage on Right */
-.skill span::after {
-  content: attr(data-percentage);
-  color: #ff4b2b;
-  font-weight: 700;
-  position: absolute;
-  right: 0;
+.Resume {
+  background-color: var(--Grey-color);
+}
+.resume-logo h5 {
+  color: var(--Red-color);
+  text-transform: uppercase;
+  font-size: 17px;
+  margin-bottom: -8px;
+}
+.resume-logo h4{
+  color: var(--White-color);
+  font-size: 50px;
+  font-weight: none !important;
+
+}
+.resume-logo p{
+  color: #a8a8a8;
+  font-size:20px;
+}
+.Resume-line {
+  display: inline-block;
+  width: 45px; 
+  height: 1px;
+  background-color: var(--Red-color);
 }
 
-/* Fix Scroll + Align Center */
-#about {
-  overflow-x: hidden;
-  padding-bottom: px;
-}
+
