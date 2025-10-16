@@ -6,12 +6,18 @@
   --Red-color: #fd105e;
 }
 
+html,
+body {
+  overflow-x: hidden; /* prevent sideways scroll */
+}
+
 body {
   font-family: "Poppins", sans-serif;
   background-color: var(--White-color);
   color: var(--Grey-color);
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 .navbar {
@@ -122,6 +128,7 @@ body {
   position: relative;
   z-index: 2;
 }
+
 .Banner-Txt {
   text-align: center;
 }
@@ -153,6 +160,7 @@ body {
   font-weight: bold;
   animation: blink 0.8s infinite;
 }
+
 .social-links {
   margin-top: 30px;
   display: flex;
@@ -189,29 +197,43 @@ body {
   box-shadow: 0 0 15px rgba(255, 75, 75, 0.6);
   border-color: var(--Red-color, #ff4b4b);
 }
+
 .section-banner2 {
   background-color: var(--Grey-color);
 }
+
 .section-banner2 span {
   color: #fd105e;
   font-size: 20px;
   font-style: none;
 }
+
 .section-banner2 h1 {
   color: var(--White-color);
   font-weight: 50px;
   font-size: 50px;
 }
+
 .section-banner2 p {
   color: #a8a8a8;
   font-size: 20px;
 }
+
 .About-Underline-Gradient {
-  margin-left: 348px;
+  position: relative;
+  display: inline-block;
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #fd105e, transparent);
+  border-radius: 2px;
+  margin: 10px 3px -20px -97px;
+  animation: titleGlow 3s ease-in-out infinite;
 }
+
 .profile-card {
   background-color: var(--LightGrey-color);
-  height: 100vh;
+  height: auto; /* FIX: prevent 100vh overflow */
+  min-height: 60%;
   border-radius: 20px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
   position: sticky;
@@ -242,6 +264,7 @@ body {
 .Rating i {
   color: #fbbf24 !important;
 }
+
 .Rating span {
   color: var(--White-color) !important;
 }
@@ -254,14 +277,17 @@ body {
   background-color: var(--Red-color);
   border: none;
 }
+
 .btn-download:hover {
   background-color: #bd164e;
   color: var(--White-color);
 }
+
 .btn-contact {
   border: 1px solid var(--Red-color);
   color: var(--Red-color);
 }
+
 .btn-contact:hover {
   background-color: var(--Red-color);
   color: var(--White-color);
@@ -271,6 +297,7 @@ body {
   color: var(--White-color);
   transition: 0.3s ease;
 }
+
 .profile-card a:hover {
   color: var(--Red-color);
 }
@@ -278,6 +305,8 @@ body {
 /* ===== ABOUT SECTION ===== */
 .section-about {
   padding: 50px 0;
+  overflow: hidden; /* FIX: contains sticky + bars */
+  position: relative;
 }
 
 .about-content {
@@ -294,6 +323,7 @@ body {
 .about-content h2 {
   font-weight: 400;
 }
+
 .about-content p {
   font-size: 16px;
   line-height: 1.8;
@@ -317,15 +347,19 @@ body {
   border-color: var(--Red-color);
   transform: translateY(-3px);
 }
+
 .small-txt {
   color: var(--Red-color);
 }
+
 .small-text {
   color: var(--White-color);
 }
+
 .info-box i {
   color: var(--Red-color);
 }
+
 .section-tag {
   display: inline-block;
   padding: 6px 16px;
@@ -343,9 +377,9 @@ body {
   margin-top: 40px;
   width: 100%;
   text-align: left;
-  overflow-y: visible !important;
-  overflow-x: hidden !important;
+  overflow: hidden !important; /* FIX: stop y-axis overflow */
   position: relative;
+  margin-bottom: 80px;
 }
 
 .skills-section h4 {
@@ -376,43 +410,44 @@ body {
   height: 10px;
   background-color: rgba(255, 255, 255, 0.08);
   border-radius: 50px;
-  overflow: hidden; /* Fix scroll bar issue */
+  overflow: hidden; /* keeps bar clean */
   position: relative;
 }
 
 /* Actual progress fill */
 .progress-bar {
   height: 100%;
-  width: 70%; /* Decreased to 70% */
+  width: 70%;
   background: linear-gradient(90deg, var(--Red-color), #b63553, #cfbbbe);
   border-radius: 50px;
-  transition: width 1s ease-in-out; /* Smooth animation */
+  transition: width 1s ease-in-out;
 }
 
 .Resume {
   background-color: var(--Grey-color);
 }
+
 .resume-logo h5 {
   color: var(--Red-color);
   text-transform: uppercase;
   font-size: 17px;
   margin-bottom: -8px;
 }
-.resume-logo h4{
+
+.resume-logo h4 {
   color: var(--White-color);
   font-size: 50px;
   font-weight: none !important;
+}
 
-}
-.resume-logo p{
+.resume-logo p {
   color: #a8a8a8;
-  font-size:20px;
+  font-size: 20px;
 }
+
 .Resume-line {
   display: inline-block;
-  width: 45px; 
+  width: 45px;
   height: 1px;
   background-color: var(--Red-color);
 }
-
-
