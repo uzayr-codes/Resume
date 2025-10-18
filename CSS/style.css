@@ -32,6 +32,9 @@ body {
     backdrop-filter 0.3s ease;
   box-shadow: none;
 }
+.navbar i{
+  color: var(--White-color);
+}
 
 .navbar.scrolled {
   background-color: rgba(20, 20, 20, 0.8);
@@ -425,39 +428,77 @@ body {
 
 .Resume {
   background-color: var(--Grey-color);
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
 .resume-logo h5 {
   color: var(--Red-color);
   text-transform: uppercase;
-  font-size: 17px;
-  margin-bottom: -8px;
+  font-size: 16px;
+  letter-spacing: 1.5px;
+  margin-bottom: 5px;
+}
+
+.Resume-line {
+  display: block;
+  width: 50px;
+  height: 2px;
+  background-color: var(--Red-color);
+  margin: 10px auto 20px;
 }
 
 .resume-logo h4 {
   color: var(--White-color);
-  font-size: 50px;
-  font-weight: none !important;
+  font-size: 45px;
+  font-weight: 600;
+  margin-bottom: 20px;
 }
 
 .resume-logo p {
   color: #a8a8a8;
-  font-size: 20px;
+  font-size: 15px;
+  line-height: 1.8;
 }
 
-.Resume-line {
-  display: inline-block;
-  width: 45px;
-  height: 1px;
-  background-color: var(--Red-color);
+.resume-card {
+  background-color: transparent;
+  padding: 20px 0;
+  text-align: left;
 }
+
+.resume-badge {
+  background-color: var(--Red-color);
+  color: white;
+  padding: 6px 18px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.resume-title {
+  color: var(--White-color);
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.resume-text {
+  color: #a8a8a8;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
 .Resume-Outer {
   background-color: var(--LightGrey-color);
-  height: 50vh !important;
-  width: 89vh;
+  height: 45vh !important;
+  width: 90vh;
   border-radius: 20px;
-  /* border-color: #b63553 !important; */
-
+  border-color: #b63553 !important;
 }
 .Resume-card-header {
   padding: 10px;
@@ -480,7 +521,7 @@ body {
   transition: all 0.3s ease-in-out;
 }
 .Card-header-right {
-  background:  linear-gradient(135deg, #b63553, #e74c7e);
+  background: linear-gradient(135deg, #b63553, #e74c7e);
   color: var(--White-color);
   padding: 0.4rem 1rem;
   border-radius: 20px;
@@ -500,7 +541,7 @@ body {
   letter-spacing: 0.05em;
 }
 .Card-links {
-  background:  linear-gradient(135deg, #b63553, #e74c7e);
+  background: linear-gradient(135deg, #b63553, #e74c7e);
   color: var(--White-color);
   padding: 0.4rem 1rem;
   border-radius: 20px;
@@ -508,4 +549,50 @@ body {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+}
+.Resume-parallel-line {
+  position: absolute;
+  right: 720px;
+  top: 515px;
+  bottom: 60px;
+  width: 3px;
+  font-size: 50px;
+  background-color: var(--Red-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 30px 0;
+  z-index: 0;
+}
+
+/* Perfect circle icons */
+.Resume-parallel-line i {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--Red-color);
+  color: var(--White-color);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+}
+
+/* Icon positions */
+.Resume-parallel-line .top-icon {
+  top: 0;
+}
+
+.Resume-parallel-line .mid-icon {
+  top: 33%;
+  transform: translate(-50%, -50%);
+}
+
+.Resume-parallel-line .below-mid-icon {
+  top: 68%;
+  transform: translate(-50%, -50%);
 }
