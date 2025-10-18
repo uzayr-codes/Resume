@@ -451,3 +451,61 @@ body {
   height: 1px;
   background-color: var(--Red-color);
 }
+.Resume-Outer {
+  background-color: var(--LightGrey-color);
+  height: 50vh !important;
+  width: 89vh;
+  border-radius: 20px;
+  /* border-color: #b63553 !important; */
+
+}
+.Resume-card-header {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem 24px;
+}
+.Cardheader-logo {
+  margin-left: 10px;
+  background: linear-gradient(135deg, #b63553, #e74c7e);
+  border-radius: 10px;
+  font-size: 28px;
+  color: var(--White-color);
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px rgba(182, 53, 83, 0.6), 0 0 20px rgba(182, 53, 83, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+.Card-header-right {
+  background:  linear-gradient(135deg, #b63553, #e74c7e);
+  color: var(--White-color);
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.Card-body {
+  background: linear-gradient(135deg, #b63553, #e74c7e);
+  color: var(--White-color);
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.Card-links {
+  background:  linear-gradient(135deg, #b63553, #e74c7e);
+  color: var(--White-color);
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}

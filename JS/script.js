@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const skillsSection = document.querySelector(".skills-section");
   const progressBars = document.querySelectorAll(".progress-bar");
 
-  // --- Initialize AOS ---
+
   if (window.AOS) {
     AOS.init({
       duration: 1200,
@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // --- Initialize Typed.js ---
   const typedElement = document.querySelector(".typed");
   if (typedElement) {
     const items = typedElement
@@ -31,15 +30,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // --- Scroll Function (Navbar, Active Link, Skills Animation) ---
   let skillsAnimated = false;
   function handleScroll() {
     const scrollY = window.scrollY;
 
-    // Navbar background toggle
     navbar.classList.toggle("scrolled", scrollY > 100);
 
-    // Active link highlighting
     let current = "";
     sections.forEach((section) => {
       const sectionTop = section.offsetTop - 120;
@@ -55,7 +51,6 @@ document.addEventListener("DOMContentLoaded", () => {
       );
     });
 
-    // Skills progress bar animation
     if (skillsSection && !skillsAnimated) {
       const sectionPos = skillsSection.getBoundingClientRect().top;
       const screenPos = window.innerHeight / 1.4;
@@ -69,6 +64,5 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Attach scroll listener
   window.addEventListener("scroll", handleScroll);
 });
