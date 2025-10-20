@@ -32,7 +32,7 @@ body {
     backdrop-filter 0.3s ease;
   box-shadow: none;
 }
-.navbar i{
+.navbar i {
   color: var(--White-color);
 }
 
@@ -468,7 +468,7 @@ body {
 }
 
 .resume-badge {
-  background-color: var(--Red-color);
+  background: linear-gradient(135deg, #b63553, #e74c7e);
   color: white;
   padding: 6px 18px;
   border-radius: 30px;
@@ -557,7 +557,7 @@ body {
   bottom: 60px;
   width: 3px;
   font-size: 50px;
-  background-color: var(--Red-color);
+  background: linear-gradient(135deg, #b63553, #e74c7e);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -566,12 +566,11 @@ body {
   z-index: 0;
 }
 
-/* Perfect circle icons */
 .Resume-parallel-line i {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  background-color: var(--Red-color);
+  background: linear-gradient(135deg, #b63553, #e74c7e);
   color: var(--White-color);
   border-radius: 50%;
   width: 50px;
@@ -581,8 +580,16 @@ body {
   justify-content: center;
   font-size: 25px;
 }
+.Resume-Outer2 {
+  background-color: var(--LightGrey-color);
+  height: 40vh !important;
+  width: 85vh;
+  border-radius: 20px;
+  border-color: #b63553 !important;
+  padding: 1.8rem;
+  position: relative;
+}
 
-/* Icon positions */
 .Resume-parallel-line .top-icon {
   top: 0;
 }
@@ -595,4 +602,154 @@ body {
 .Resume-parallel-line .below-mid-icon {
   top: 68%;
   transform: translate(-50%, -50%);
+}
+
+.Services {
+  background-color: var(--Grey-color);
+  color: var(--White-color);
+  padding: 80px 0;
+}
+
+.services-header h5 {
+  color: var(--Red-color);
+  text-transform: uppercase;
+  font-size: 15px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.services-header h2 {
+  font-size: 45px;
+  font-weight: 700;
+  color: var(--White-color);
+  margin-bottom: 15px;
+}
+
+.services-header p {
+  color: #a8a8a8;
+  max-width: 650px;
+  margin: 0 auto;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* Service Cards */
+.service-card {
+  background: rgba(28, 28, 28, 0.8);
+  backdrop-filter: blur(8px);
+  border: 1px solid transparent;
+  border-radius: 15px;
+  padding: 30px 25px;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  text-align: center;
+}
+
+.service-card i {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 20px;
+  font-size: 40px;
+  background-color: rgba(182, 53, 83, 0.4);
+  color: var(--Red-color);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.service-card i:hover {
+  background-color: var(--Red-color);
+  color: var(--white-color);
+  transform: rotate(5deg) scale(1.05);
+}
+
+.service-card h4 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.service-card p {
+  color: #aaa;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.service-card:hover {
+  border: 1px solid var(--Red-color);
+  box-shadow: 0 0 15px rgba(182, 53, 83, 0.4);
+  transform: translateY(-5px);
+}
+
+.explore-link {
+  color: var(--White-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.explore-link:hover {
+  color: var(--Red-color);
+}
+
+/* Featured Card */
+.featured {
+  border: 1px solid var(--Red-color);
+  position: relative;
+  box-shadow: 0 0 20px rgba(182, 53, 83, 0.3);
+}
+
+.featured-tag {
+  position: absolute;
+  top: 10px;
+  right: -35px;
+  background: linear-gradient(135deg, #b63553, #e74c7e);
+  color: #fff;
+  padding: 3px 40px;
+  transform: rotate(45deg);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* CTA Banner */
+.cta-banner {
+  background: linear-gradient(135deg, #b63553, #e67fa0);
+  border-radius: 20px;
+  padding: 35px 50px;
+  margin-top: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.cta-text h3 {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.cta-text p {
+  color: #f1f1f1;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.cta-btn {
+  background: #fff;
+  color: #b63553;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.cta-btn:hover {
+  background: #141414;
+  color: #fff;
 }
