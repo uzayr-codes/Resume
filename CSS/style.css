@@ -38,7 +38,6 @@ body {
 
 .navbar.scrolled {
   background-color: rgba(20, 20, 20, 0.8);
-  backdrop-filter: blur(8px);
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -235,7 +234,7 @@ body {
 
 .profile-card {
   background-color: var(--LightGrey-color);
-  height: auto; /* FIX: prevent 100vh overflow */
+  height: auto;
   min-height: 60%;
   border-radius: 20px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
@@ -305,10 +304,9 @@ body {
   color: var(--Red-color);
 }
 
-/* ===== ABOUT SECTION ===== */
 .section-about {
   padding: 50px 0;
-  overflow: hidden; /* FIX: contains sticky + bars */
+  overflow: hidden;
   position: relative;
 }
 
@@ -380,7 +378,7 @@ body {
   margin-top: 40px;
   width: 100%;
   text-align: left;
-  overflow: hidden !important; /* FIX: stop y-axis overflow */
+  overflow: hidden !important;
   position: relative;
   margin-bottom: 80px;
 }
@@ -407,17 +405,14 @@ body {
   margin-bottom: 12px;
 }
 
-/* Progress bar base */
 .progress {
   width: 100%;
   height: 10px;
   background-color: rgba(255, 255, 255, 0.08);
   border-radius: 50px;
-  overflow: hidden; /* keeps bar clean */
+  overflow: hidden;
   position: relative;
 }
-
-/* Actual progress fill */
 .progress-bar {
   height: 100%;
   width: 70%;
@@ -443,7 +438,7 @@ body {
 .Resume-line {
   display: block;
   width: 50px;
-  height: 2px;
+  height: 1px;
   background-color: var(--Red-color);
   margin: 10px auto 20px;
 }
@@ -457,7 +452,7 @@ body {
 
 .resume-logo p {
   color: #a8a8a8;
-  font-size: 15px;
+  font-size: 20px;
   line-height: 1.8;
 }
 
@@ -617,6 +612,13 @@ body {
   letter-spacing: 2px;
   margin-bottom: 10px;
 }
+.services-line{
+   display: block;
+  width: 50px;
+  height: 1px;
+  background-color: var(--Red-color);
+  margin: 10px auto 20px;
+}
 
 .services-header h2 {
   font-size: 45px;
@@ -629,7 +631,7 @@ body {
   color: #a8a8a8;
   max-width: 650px;
   margin: 0 auto;
-  font-size: 15px;
+  font-size: 20px;
   line-height: 1.8;
 }
 
@@ -704,15 +706,17 @@ body {
 
 .featured-tag {
   position: absolute;
-  top: 10px;
-  right: -35px;
+  top: 15px;
+  right: -30px;
   background: linear-gradient(135deg, #b63553, #e74c7e);
-  color: #fff;
-  padding: 3px 40px;
-  transform: rotate(45deg);
-  font-size: 10px;
-  font-weight: 600;
+  color: var(--White-color);
+  padding: 5px 35px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
   letter-spacing: 1px;
+  transform: rotate(45deg);
+  box-shadow: 0 3px 10px rgba(54, 144, 231, 0.3);
 }
 
 /* CTA Banner */
@@ -750,6 +754,76 @@ body {
 }
 
 .cta-btn:hover {
-  background: #141414;
+  background: black;
   color: #fff;
+  transform: translateY(-5px);
+}
+/* ============================= */
+.Portfolio {
+  background-color: var(--Grey-color);
+  color: var(--White-color);
+  padding: 80px 0;
+}
+
+/* HEADER */
+.portfolio-header h2 {
+  font-size: 45px;
+  font-weight: 700;
+  color: var(--White-color);
+  margin-bottom: 15px;
+}
+
+.portfolio-header p {
+  color: #a8a8a8;
+  max-width: 650px;
+  margin: 0 auto;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.Portfolio-line {
+  display: block;
+  width: 50px;
+  height: 1px;
+  background-color: var(--Red-color);
+  margin: 10px auto 20px;
+}
+
+/* ✅ BUTTON GROUP */
+.portfolio-btn-group {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-top: 25px;
+  margin: 0;
+  padding-left: 0;
+}
+
+.btn-filter {
+  padding: 6px 14px;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: transparent;
+  color: var(--White-color);
+  border: 1px solid color-mix(in srgb, var(--Red-color), transparent 75%);
+}
+
+.btn-filter:hover {
+  border-color: var(--Red-color);
+  border-color: var(--Red-color);
+  color: var(--Red-color);
+  transform: translateY(-2px);
+}
+
+.btn-filter.active {
+  background-color: var(--Red-color);
+  border-color: var(--Red-color);
+  color: var(--White-color);
+  box-shadow: 0 0 10px rgba(204, 75, 105, 0.125);
 }

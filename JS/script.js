@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const skillsSection = document.querySelector(".skills-section");
   const progressBars = document.querySelectorAll(".progress-bar");
 
-
   if (window.AOS) {
     AOS.init({
       duration: 1200,
@@ -65,4 +64,13 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   window.addEventListener("scroll", handleScroll);
+});
+
+const buttons = document.querySelectorAll(".btn-filter");
+
+buttons.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    buttons.forEach((b) => b.classList.remove("active"));
+    btn.classList.add("active");
+  });
 });
