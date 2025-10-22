@@ -612,8 +612,8 @@ body {
   letter-spacing: 2px;
   margin-bottom: 10px;
 }
-.services-line{
-   display: block;
+.services-line {
+  display: block;
   width: 50px;
   height: 1px;
   background-color: var(--Red-color);
@@ -827,3 +827,4 @@ body {
   color: var(--White-color);
   box-shadow: 0 0 10px rgba(204, 75, 105, 0.125);
 }
+
